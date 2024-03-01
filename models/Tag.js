@@ -4,9 +4,18 @@ const sequelize = require('../config/connection.js');
 
 class Tag extends Model {}
 
+// define Tag model
 Tag.init(
   {
-    // define columns
+    id: {
+      type: DataType.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
+    tag_name: {
+      type: DataTyle.STRING
+    }
   },
   {
     sequelize,
