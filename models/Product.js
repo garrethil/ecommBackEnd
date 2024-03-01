@@ -6,10 +6,26 @@ const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-// set up fields and rules for Product model
-Product.init(
-  {
-    // define columns
+// define product model
+Product.init({
+
+    id: {
+      type: DataType.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
+    product_name: {
+      type: DataType.STRING,
+      allowNull: false
+    },
+    price: {
+      type: DataType.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal: true
+      }
+    }
   },
   {
     sequelize,
@@ -17,7 +33,6 @@ Product.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product',
-  }
-);
+  });
 
 module.exports = Product;

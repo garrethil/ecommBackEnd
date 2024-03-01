@@ -4,8 +4,9 @@ const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
 
+// define category model
 Category.init({
-    // define columns
+
   id: {
     type: DataType.INTEGER,
     primaryKey: true,
@@ -24,7 +25,6 @@ Category.init({
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
-  }
-);
+  });
 
 module.exports = Category;
