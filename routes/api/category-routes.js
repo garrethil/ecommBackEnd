@@ -70,8 +70,10 @@ router.delete('/:id', async (req, res) => {
       res.status(404).json({ message: 'No category found' })
       return;
     }
-  } catch (err) {
+    res.status(200).json({ message: 'succesfully deleted' });
 
+  } catch (err) {
+    res.status(500).json(err);
   }
   
 });
