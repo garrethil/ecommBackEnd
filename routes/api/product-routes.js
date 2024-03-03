@@ -117,13 +117,9 @@ const productData = Product.destroy({
     id: req.params.id
   }
   })
-if (!productData[0]) {
-  res.status(404).json({ message: 'No product found' })
-  return;
-}
 
 
-  res.status(200).json(productData);
+  res.status(200).json({ message: 'product succesfully deleted' });
 } catch (err) {
   res.status(400).json(err);
 }
