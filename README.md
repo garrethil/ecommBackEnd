@@ -6,7 +6,7 @@
 The Ecomm Back End allows a user to view all, view by id and to create, update and delete products, categories and tags using mySQL, Node, Express and Sequilize. 
 
   ## Installation 
-  Since this is a backend only applications all use will be done on an API development platform like Insomnia to demonstrate its functional routes. Once the repo has been cloned to your local machine you can seed the DB by running `npm run seed` in your terminal. Then to start the server you will run `npm start`. Then you may begin your testing.
+  Since this is a backend only applications all use will be done on an API development platform like Insomnia to demonstrate its functional routes. Once the repo has been cloned to your local machine you can run `npm i` in your terminal to install all dependencies. To seed the DB run `npm run seed` in your terminal. Then to start the server you will run `npm start` in your terminal. Then you may begin your testing.
 
   ## Usage
     To see the app in action you will need to setup the appropriate paths as your URLs in you API development platform to be able to GET, POST, PUT and DELETE for tags, products and categories.
